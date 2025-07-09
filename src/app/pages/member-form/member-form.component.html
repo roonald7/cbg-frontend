@@ -1,0 +1,28 @@
+<h2>Cadastro de Membro</h2>
+
+<form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nome:</label>
+    <input type="text" formControlName="nome" />
+  </div>
+
+  <div>
+    <label>Data de nascimento:</label>
+    <input type="date" formControlName="nascimento" />
+  </div>
+
+  <div>
+    <label>Função:</label>
+    <select formControlName="funcao">
+      <option value="">Selecione</option>
+      <option value="membro">Membro</option>
+      <option value="pastor">Pastor</option>
+      <option value="diácono">Diácono</option>
+    </select>
+  </div>
+
+  <button type="submit">Salvar</button>
+</form>
+
+<br />
+<a routerLink="/membros">Voltar para lista</a>
